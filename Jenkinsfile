@@ -25,7 +25,7 @@ pipeline{
 		stage('Deploy') {
 			steps {
 				sh '''
-					oc project mprabhan-deploy-strategies
+					oc project rdqcxh-deploy-strategies
 					oc start-build greeting-service --follow --wait
 				'''
 			}
