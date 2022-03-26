@@ -22,14 +22,12 @@ pipeline{
         }
 
         // Add the "Deploy" stage here
-		stages{
-			stage('Deploy') {
-				steps {
-					sh '''
-						oc project mprabhan-deploy-strategies
-						oc start-build greeting-service --follow --wait
-					'''
-				}
+		stage('Deploy') {
+			steps {
+				sh '''
+					oc project mprabhan-deploy-strategies
+					oc start-build greeting-service --follow --wait
+				'''
 			}
 		}
     }
